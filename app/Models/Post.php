@@ -31,9 +31,18 @@ class Post extends Model
                                                             //"use App\Models\Categoria"
     }
 
-        //relacion 1 a 1 polimorfica
+    //relacion 1 a 1 polimorfica
     public function image(){
         return $this->morphOne('App\Models\Image', 'imageable');    //imageable es el metodo a usar
     }
 
+    //relacion 1 a muchos polimorfica
+    public function comments(){
+        return $this->morphMany('App\Models\Comment', 'commentable');    //commentable es el metodo a usar
+    }
+
+    //relacion muchos a muchos polimorfica
+    public function tags(){
+        return $this->morphToMany('App\Models\Tag', 'taggable');    //taggable[s] es la tabla intermedia que las relaciona
+    }
 }

@@ -20,4 +20,14 @@ class Video extends Model
                                                             //"use App\Models\Users"
     }
 
+    //relacion 1 a muchos polimorfica
+    public function comments(){
+        return $this->morphMany('App\Models\Comment', 'commentable');    //commentable es el metodo a usar
+    }
+
+    //relacion muchos a muchos polimorfica
+    public function tags(){
+        return $this->morphToMany('App\Models\Tag', 'taggable');    //taggable[s] es la tabla intermedia que las relaciona
+    }
+
 }

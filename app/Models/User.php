@@ -93,6 +93,11 @@ class User extends Authenticatable
                                                             //"use App\Models\Video"
     }
 
+    //relacion 1 a muchos direta
+    public  function comments(){                 //metodo que me devuelve los comments de un usuario
+        return $this->hasMany('App\Models\Comment');       //una manera mucho mas resumida
+    }
+
     //relacion muchos a muchos
     public  function roles(){                              //metodo que me devuelve los roles de un usuario
 //        $roles = Role::find($this->user_id);
