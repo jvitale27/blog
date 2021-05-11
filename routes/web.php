@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//para ver la pagina de componentes de Blade
 Route::get('/componentes', function () {
     return view('welcome-componentes');
 });

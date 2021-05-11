@@ -26,7 +26,7 @@
     <body>
 
         <div class="container mx-auto">
-            COMPONENTES DE CLASE            
+            COMPONENTES DE CLASE x-alert            
             <x-alert>
             </x-alert>
             <br><br>
@@ -35,7 +35,7 @@
                 <x-slot name="titulo">
                     este es mi titulo
                 </x-slot>
-                Con titulo y color blue
+                Con titulo y color blue                 {{-- esto va al $slot --}}
             </x-alert>
             <br><br>
 
@@ -43,7 +43,7 @@
                 <x-slot name="titulo">
                     Titulo numero 2
                 </x-slot>
-                Con titulo y color pasado por una variable, ademas de agregar classes
+                Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
             </x-alert>
             <br>
 
@@ -51,23 +51,23 @@
                 $color = 'yellow';
                 $cual_alerta = 'alert2';
             @endphp
-            COMPONENTES ANONIMOS
+            COMPONENTES ANONIMOS x-alert2
             <x-alert2 />
             <br>
             <x-alert2 :color="$color">
                 <x-slot name="titulo">
                     Titulo numero 3
                 </x-slot>
-                Con titulo y color pasado por una variable, ademas de agregar classes
+                Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
             </x-alert2>
             <br>
 
-            COMPONENTES DINAMICOS
+            COMPONENTES DINAMICOS depende de una variable '$cual_alerta'
             <x-dynamic-component :component='$cual_alerta'>
                 <x-slot name="titulo">
                     Titulo numero 4
                 </x-slot>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor alias recusandae assumenda ex illo corporis nemo quaerat consequuntur, esse omnis odit quibusdam sunt quod numquam, iusto, velit perspiciatis labore vero!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor alias recusandae assumenda ex illo corporis nemo quaerat consequuntur, esse omnis odit quibusdam sunt quod numquam, iusto, velit perspiciatis labore vero!          {{-- esto va al $slot --}}
             </x-dynamic-component>
 
         </div>
