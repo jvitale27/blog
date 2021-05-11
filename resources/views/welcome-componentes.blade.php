@@ -27,13 +27,13 @@
 
         <div class="container mx-auto">
             COMPONENTES DE CLASE x-alert            
-            <x-alert>
+            <x-alert>                               {{-- sin titulo ni texto ni color asignado, solo lo por defecto --}}
             </x-alert>
             <br><br>
 
             <x-alert color="blue">
                 <x-slot name="titulo">
-                    este es mi titulo
+                    este es mi titulo                   {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color blue                 {{-- esto va al $slot --}}
             </x-alert>
@@ -41,7 +41,7 @@
 
             <x-alert :color="$color" class="text-2xl font-bold italic mt-2">
                 <x-slot name="titulo">
-                    Titulo numero 2
+                    Titulo numero 2                     {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
             </x-alert>
@@ -56,7 +56,7 @@
             <br>
             <x-alert2 :color="$color">
                 <x-slot name="titulo">
-                    Titulo numero 3
+                    Titulo numero 3                     {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
             </x-alert2>
@@ -65,7 +65,7 @@
             COMPONENTES DINAMICOS depende de una variable '$cual_alerta'
             <x-dynamic-component :component='$cual_alerta'>
                 <x-slot name="titulo">
-                    Titulo numero 4
+                    Titulo numero 4                     {{-- esto va al $titulo --}}
                 </x-slot>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor alias recusandae assumenda ex illo corporis nemo quaerat consequuntur, esse omnis odit quibusdam sunt quod numquam, iusto, velit perspiciatis labore vero!          {{-- esto va al $slot --}}
             </x-dynamic-component>

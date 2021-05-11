@@ -6,8 +6,8 @@ use Illuminate\View\Component;
 
 class Alert extends Component
 {
-    public $color;
-    public $titulo = 'Titulo de Alerta por defecto';
+    public $color;                                      //agregado por mi
+    public $titulo = 'Titulo de Alerta por defecto';    //agregado por mi
     /**
      * Create a new component instance.
      *
@@ -15,7 +15,7 @@ class Alert extends Component
      */
     public function __construct( $color = 'green')
     {
-        $this->color = $color;              //agregado por mi
+        $this->color = $color;              //agregado por mi, para que setee el color del componente
     }
 
     /**
@@ -32,5 +32,7 @@ class Alert extends Component
     public function prueba(){
         if($this->color == 'pink')
             return "el componentes es pink. metodo prueba()";
+        else
+            return "el componentes NO es pink. metodo prueba()";
     }
 }

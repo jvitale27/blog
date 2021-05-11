@@ -1,3 +1,6 @@
+{{-- COMPONENTE ANONIMO x-alert2 --}}
+
+{{-- declaro parametros a pasarle --}}
 @props(['color' => 'red', 'titulo' => 'tutulo por defecto'])
 
 <div class="alert flex flex-row items-center bg-{{$color}}-200 p-5 rounded border-b-2 border-red-300">
