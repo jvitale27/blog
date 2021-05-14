@@ -26,40 +26,40 @@
     <body>
 
         <div class="container mx-auto">
-            COMPONENTES DE CLASE x-alert            
-            <x-alert>                               {{-- sin titulo ni texto ni color asignado, solo lo por defecto --}}
-            </x-alert>
+            COMPONENTES DE CLASE x-alert-jula            
+            <x-alert-jula>                               {{-- sin titulo ni texto ni color asignado, solo lo por defecto --}}
+            </x-alert-jula>
             <br><br>
 
-            <x-alert color="blue">
+            <x-alert-jula color="blue">
                 <x-slot name="titulo">
                     este es mi titulo                   {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color blue                 {{-- esto va al $slot --}}
-            </x-alert>
+            </x-alert-jula>
             <br><br>
 
-            <x-alert :color="$color" class="text-2xl font-bold italic mt-2">
+            <x-alert-jula :color="$color" class="text-2xl font-bold italic mt-2">
                 <x-slot name="titulo">
                     Titulo numero 2                     {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
-            </x-alert>
+            </x-alert-jula>
             <br>
 
             .@php
                 $color = 'yellow';
-                $cual_alerta = 'alert2';
+                $cual_alerta = 'alert2-jula';
             @endphp
-            COMPONENTES ANONIMOS x-alert2
-            <x-alert2 />
+            COMPONENTES ANONIMOS x-alert2-jula
+            <x-alert2-jula />
             <br>
-            <x-alert2 :color="$color">
+            <x-alert2-jula :color="$color">
                 <x-slot name="titulo">
                     Titulo numero 3                     {{-- esto va al $titulo --}}
                 </x-slot>
                 Con titulo y color pasado por una variable, ademas de agregar classes   {{-- esto va al $slot --}}
-            </x-alert2>
+            </x-alert2-jula>
             <br>
 
             COMPONENTES DINAMICOS depende de una variable '$cual_alerta'

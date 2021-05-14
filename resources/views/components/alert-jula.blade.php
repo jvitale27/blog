@@ -1,4 +1,4 @@
-{{-- COMPONENTES DE CLASE x-alert --}}
+{{-- COMPONENTES DE CLASE x-alert-jula --}}
 
 <div class="bg-orange-50 border-l-4 border-orange-300 text-orange-600 p-4" role="alert">
   <p class="font-bold">Be Warned</p>

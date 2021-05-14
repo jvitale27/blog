@@ -1,4 +1,4 @@
-{{-- COMPONENTE ANONIMO x-alert2 --}}
+{{-- COMPONENTE ANONIMO x-alert2-jula --}}
 
 {{-- declaro parametros a pasarle --}}
 @props(['color' => 'red', 'titulo' => 'tutulo por defecto'])
