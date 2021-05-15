@@ -1,6 +1,18 @@
 {{-- evitamos la vista welcome y llamamos directamente el componente de la pantalla principal --}}
 <x-app-layout>
 
+    <x-slot name="header">
+        Este seria el slot header si lo quisiera
+    </x-slot>
+
+    {{-- este seria el slot principal --}}
+    <br>
+    WELCOME.BLADE.PHP
+    <br>
+    ESTE ES EL SLOT PRINCIPAL.
+    <br>
+    AQUI IRIA TODO EL CONTENIDO DE MI PAGINA PRINCIPAL.
+
 </x-app-layout>
 
 {{-- <!DOCTYPE html>

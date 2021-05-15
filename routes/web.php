@@ -23,9 +23,9 @@ Route::get('/componentes', function () {
 });
 
 //verifico si esta logueado con el middleware 'auth', sino no le muestra /dashboard y lo redirige a login
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+// //    return view('dashboard');
+// })->name('dashboard');
 
 //verifico si esta logueado con el middleware 'auth' y luego autorizado con el middleware 'age'
 Route::get('prueba', function() {

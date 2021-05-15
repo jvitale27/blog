@@ -45,7 +45,7 @@ return [
         // Features::termsAndPrivacyPolicy(),
         // Features::profilePhotos(),
         // Features::api(),
-        Features::teams(['invitations' => true]),
+        // Features::teams(['invitations' => true]),     //Elimino la opcion de Teams (equipos)
         Features::accountDeletion(),
     ],
 
