@@ -26,8 +26,8 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
-//    'env' => env('APP_ENV', 'development'),
+//    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'development'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,6 +58,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'mix_url' => env('MIX_ASSET_URL', null),    //agregado para que funcione mix('css/app.css')
+    
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
