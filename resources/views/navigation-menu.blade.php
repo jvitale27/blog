@@ -27,7 +27,7 @@
                     <a href="{{ route('home') }}">
                         {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
                         {{-- cambio el logo --}}
-                        <img class="block h-9 w-auto" src="storage/logo.png" alt="">
+                        <img class="block h-9 w-auto" src="{{ Storage::url('logo.png') }}" alt="">
                     </a>
                 </div>
 
