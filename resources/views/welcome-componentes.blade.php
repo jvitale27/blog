@@ -19,12 +19,11 @@
 
     </head>
 
-.@php
+@php
     $color = 'pink';
 @endphp
 
     <body>
-
         <div class="container mx-auto">
             COMPONENTES DE CLASE x-alert-jula            
             <x-alert-jula>                               {{-- sin titulo ni texto ni color asignado, solo lo por defecto --}}
