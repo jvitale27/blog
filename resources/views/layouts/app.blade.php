@@ -14,18 +14,31 @@
         {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> este funciona sin problemas--}}
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">    {{-- supuestamente va este --}}
 
-        @livewireStyles
+        <!-- 'mi_css' styles -->
+        {{--slot para definir estilos desde plantillas. Es para que funcione Dropzone, etc. --}}
+        @if (isset($mi_css))
+            {{ $mi_css }}
+        @endif
 
-        <!-- Scripts -->
+        <!-- Livewire styles -->
+        @livewireStyles                     {{-- estilos de livewire --}}
+
+        <!-- stack 'css' styles -->
+        {{-- aqui puedo incluir codigo 'css' con la sintaxis push('css') de blade, desde mi {{ $slot }} principal --}}
+        @stack('css')
+
+        <!-- Scripts. -->
         {{-- <script src="{{ asset('js/app.js') }}" defer></script> este funciona sin problemas--}} 
         <script src="{{ mix('js/app.js') }}" defer></script>    {{-- supuestamente va este --}}
+
     </head>
+
     <body class="font-sans antialiased">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
 
-            {{-- menu de navegacion realizado con livewire --}}
+            <!-- instancio el componente de livewire 'navigation-menu' que esta en views\navigation-menu.blade.php -->
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -39,12 +52,25 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                {{ $slot }}             {{--aqui va todo el contenido de quien lo invoca o instancia--}}
             </main>
         </div>
 
+        <!-- stack 'modals' -->
         @stack('modals')
 
-        @livewireScripts
+        <!-- Livewire scripts -->
+        @livewireScripts                {{-- scripts de livewire --}}
+
+        <!-- 'mi_js' scripts -->
+        {{-- slot para ejecutar scripts desde cualquier plantilla --}}
+        @if (isset($mi_js))
+            {{ $mi_js }}        {{-- slot para ejecutar scripts desde cualquier plantilla --}}
+        @endif
+
+        <!-- stack 'js' scripts -->
+        {{-- aqui puedo incluir codigo 'js' con la sintaxis push('js') de blade, desde mi {{ $slot }} principal --}}
+        @stack('js')
+
     </body>
 </html>
